@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border:  1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500" height="500" id="can"></canvas>
+    <script>
+
+        var ctx = document.getElementById("can").getContext("2d");
+        setInterval(function(){
+         //ctx.clearRect(0,0,500,500);
+         ctx.beginPath();
+         var CircleX = Math.round(Math.random()* 500);
+         var CircleY = Math.round(Math.random()* 500);
+         var CircleZ = Math.round(Math.random()* 50);
+         var red = Math.round(Math.random()* 255);
+         var green = Math.round(Math.random()* 255);
+         var blue = Math.round(Math.random()* 255);
+         var alpha= Math.random();
+         ctx.fillStyle = "rgba("+red+", "+green+", "+blue+" , "+alpha+" )";
+         ctx.arc(CircleX,  CircleY, CircleZ, 0,(Math.PI / 180) * 360,true );
+         ctx.fill();
+         ctx.closePath();
+        },1);
+    </script>
+</body>
+</html>

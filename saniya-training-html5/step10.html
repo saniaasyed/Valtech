@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window storage</title>
+    <script>
+        var user = null;
+        //conole.log(window.user);
+        function storeUserInfo(){
+            user = document.getElementById("uname").value
+        }
+
+        function getUserInfo(){
+            document.getElementById("log").textContent = user;
+        }
+    </script>
+</head>
+<body>
+    <input id ="uname" type="text">
+    <button onclick="storeUserInfo()">Add User</button>
+    <button onclick="getUserInfo()">Get user name</button>
+    <hr>
+    <h2>
+        User Name Is : <span id = "log"></span>
+    </h2>
+
+</body>
+</html>

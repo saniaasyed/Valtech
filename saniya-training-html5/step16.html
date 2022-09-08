@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas with Images</title>
+    <style>
+        canvas{
+            border: 2px solid grey;
+
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="600" id="can"></canvas>
+    
+
+    <script>
+        var ctx = document.getElementById("can").getContext("2d")
+        var img1 = new Image();
+        img1.src = "images/doctorstrange.jpg";
+        img1.onload = function(){
+            ctx.rotate((Math.PI / 180) * 15);
+            ctx.drawImage(img1, 0,0)
+        }
+
+        var ctx = document.getElementById("can").getContext("2d")
+        var img2 = new Image();
+        img2.src = "images/ironman.jpg";
+        img2.onload = function(){
+            ctx.rotate((Math.PI / 180) * 15);
+            ctx.drawImage(img2, 0,0)
+        }
+    </script>
+</body>
+</html>
