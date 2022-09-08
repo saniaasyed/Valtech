@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="800" id="can"></canvas>
+    <script>
+        var boxX=10;
+        var ctx = document.getElementById("can").getContext("2d");
+        ctx.beginPath();
+        ctx.strokeStyle ="black";
+        ctx.moveTo(100,400);
+       
+        ctx.lineTo(500,400);
+        ctx.lineTo(400,550);
+        ctx.lineTo(180,550);
+        ctx.lineTo(100,400);
+
+        ctx.moveTo(300,400);
+        ctx.lineTo(300,250);
+        ctx.lineTo(350,350);
+        ctx.lineTo(300,350);
+        ctx.fillStyle = "pink";
+        ctx.fill();
+        ctx.moveTo(100,400);
+        ctx.lineTo(100,350);
+        ctx.lineTo(200,350);
+        ctx.lineTo(250,400);
+        ctx.fillStyle = "pink";
+        ctx.fill();
+
+       
+        ctx.stroke();
+        
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.strokeStyle ="black";
+        ctx.moveTo(0,550);
+        ctx.lineTo(600,550);
+        ctx.lineTo(600,800);
+        ctx.lineTo(0,800);
+        ctx.fillStyle = "lightblue";
+        ctx.fill();
+        ctx.stroke();
+        ctx.font = "24px Arial bold";
+    ctx.fillStyle = "Black";
+    ctx.translate(10,40);
+    ctx.fillText("Saniya",250,450);
+       
+
+        
+
+        
+       
+        
+        //ctx.closePath();
+        ctx.stroke();
+
+
+        setInterval(function(){
+         //ctx.clearRect(0,0,800,100);
+         ctx.beginPath();
+         var CircleX = Math.round(Math.random()* 800);
+         var CircleY = Math.round(Math.random()* 100);
+         var CircleZ = Math.round(Math.random()* 50);
+         var red = Math.round(Math.random()* 255);
+         var green = Math.round(Math.random()* 255);
+         var blue = Math.round(Math.random()* 255);
+         var alpha= Math.random();
+         ctx.fillStyle = "rgba("+173+", "+216+", "+230+" , "+alpha+" )";
+         ctx.arc(CircleX,  CircleY, CircleZ, 0,(Math.PI / 180) * 360,true );
+         ctx.fill();
+         
+         ctx.closePath();
+        },1);
+
+        ctx.beginPath();
+        ctx.strokeStyle ="black";
+        ctx.fillStyle = "yellow";
+        ctx.arc(150,170,70,0,(Math.PI / 180)*360, true);
+        
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        
+
+        
+    </script>
+</body>
+</html>
