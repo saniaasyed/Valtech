@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            width: 1000px;
+            margin: auto;
+        }
+        header{ 
+            height: 100px;
+            background-color: lightgreen ;
+            color : aliceblue;
+            text-align: center;
+            font-size: 30px;
+            line-height: 100px;
+        }
+        footer{ 
+            height: 50px;
+            background-color: lightgreen;
+            color : aliceblue;
+            text-align: center;
+            line-height: 50px;
+
+        }
+        section{
+            background-color: antiquewhite;
+           
+        }
+        section:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        article{
+            padding: 10px;
+        }
+        article h1{
+            margin: 0px;
+        }
+        
+        .box1{
+            background-color: yellow;
+            margin-left: 10px;
+            width: 500px;
+        }
+        .box2{
+            background-color: yellow;
+            margin-left: 10px;
+            width: 500px;
+        }
+        .box3{
+            margin-left: 10px;
+            background-color: yellow;
+            width: 500px;
+        }
+        aside{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            hello
+        </header>
+        <section>
+            <h1>
+                hi
+            </h1>
+            <article class="box1">
+                <h1>First</h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati expedita, cum placeat voluptas saepe hic aspernatur qui dicta alias amet facere, illum earum debitis cupiditate a quibusdam, consectetur deleniti unde.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit ea itaque eligendi voluptates nihil vitae, in praesentium nemo eaque necessitatibus, aut dolorem eos iste provident, sapiente quae! Suscipit, est omnis?
+            </article><br>
+            <article class="box2">
+                <h1>Second</h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati expedita, cum placeat voluptas saepe hic aspernatur qui dicta alias amet facere, illum earum debitis cupiditate a quibusdam, consectetur deleniti unde.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit ea itaque eligendi voluptates nihil vitae, in praesentium nemo eaque necessitatibus, aut dolorem eos iste provident, sapiente quae! Suscipit, est omnis?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit ea itaque eligendi voluptates nihil vitae, in praesentium nemo eaque necessitatibus, aut dolorem eos iste provident, sapiente quae! Suscipit, est omnis?
+            </article><br>
+            <article class="box3">
+                <h1>Third</h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati expedita, cum placeat voluptas saepe hic aspernatur qui dicta alias amet facere, illum earum debitis cupiditate a quibusdam, consectetur deleniti unde.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit ea itaque eligendi voluptates nihil vitae, in praesentium nemo eaque necessitatibus, aut dolorem eos iste provident, sapiente quae! Suscipit, est omnis?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit ea itaque eligendi voluptates nihil vitae, in praesentium nemo eaque necessitatibus, aut dolorem eos iste provident, sapiente quae! Suscipit, est omnis?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit ea itaque eligendi voluptates nihil vitae, in praesentium nemo eaque necessitatibus, aut dolorem eos iste provident, sapiente quae! Suscipit, est omnis?
+            </article><br>
+            <section id="aside"></section>
+        </section>
+        <footer>
+            thank you
+        </footer>
+    </div>
+</body>
+</html>
