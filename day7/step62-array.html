@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var favnum=[12,2,15,9,4,6,22,8,82,11,32,1,4];
+        function sortitout(val1,val2){
+            console.log(val1,val2);
+            if(val1>val2){
+                return 1;
+            }
+            else if(val1<val2){
+                return -1;
+            }
+            else{
+                return 0;
+            }
+        }
+
+        function sortFun(){
+            document.getElementById("log").innerHTML=favnum.sort(sortitout);
+        }
+    </script>
+</head>
+<body>
+    <h1>Sort the Array:<span id="log"></span></h1>
+    <button onclick="sortFun()">Sort</button>
+</body>
+</html>

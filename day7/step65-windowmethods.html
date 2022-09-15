@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var win=null;
+        function myfunction(){
+           win= window.open("https://www.google.com", "google", "status,height=200, width=200");
+
+        }
+
+        function myfunctionclose(){
+           win.close();
+        }
+
+        function myfunctionalert(){
+            window.alert();
+        }
+
+        function myfunctionprompt(){
+            window.prompt();
+        }
+
+        function changewin(){
+            win.location="http://tooncrush.com";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="myfunction()">click</button>
+    <button onclick="myfunctionclose()">close me</button>
+    <button onclick="myfunctionalert()">click for alert</button>
+    <button onclick="myfunctionprompt()">click for prompt</button>
+    <button onclick="changewin()">click to change</button>
+</body>
+</html>

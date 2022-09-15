@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var count=0;
+       var value1="5";
+       var  value2=5;
+        
+        function increaseFun(){
+            count++;
+            document.getElementById("op").value=count;
+        }  
+
+        function isequal(){
+            if(value1==value2){
+            document.getElementById("op").value=true;
+            }else{
+            document.getElementById("op").value=false;
+        } 
+    } 
+    </script>
+
+</head>
+<body>
+    <h1>count is <output id="op"></output></h1>
+    <button id="count" onclick= "increaseFun()">increase count</button>
+    <button id="count" onclick="isequal()">Are values equal</button>
+</body>
+</html>

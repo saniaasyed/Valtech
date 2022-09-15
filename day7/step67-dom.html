@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .selection{
+            border: 1px dashed red;
+        }
+    </style>
+    <script>
+        window.onload =function(){
+      //document.body.children[1].textContent = "changed";
+      document.body.children[1].setAttribute("class", "selection");
+
+      document.body.children[2].children[0].textContent = "changed";
+      document.first.textContent="form is changed";
+      document.images[0].src="images/spiderman.jpg"
+      document.links[0].textContent="google";
+
+    }
+    </script>
+</head>
+<body>
+    <P>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi distinctio, corrupti qui rem animi quae aspernatur minima. Natus voluptatibus aperiam modi? Adipisci dolore mollitia ab architecto accusamus fugit quisquam excepturi?
+
+    </P>
+    <P>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste deleniti accusamus eligendi eius recusandae nobis exercitationem quisquam qui, rerum ratione, amet vitae laudantium unde, nemo commodi aliquam voluptatibus! Eius, ab!
+
+    </P>
+
+   <ul>
+    <li>list 1</li>
+    <li>list 2</li>
+    <li>list 3</li>
+    <li>list 4</li>
+    <li>list 5</li>
+   </ul>
+
+   <form action="" name="first">asfyhggk</form>
+   <form action="" name="second">asfyhggk</form>
+   <form action="" name="third">asfyhggk</form>
+   <form action="" name="fourth">asfyhggk</form>
+
+   <img src="images/superman.jpg" alt=""><br>
+   <a href="http://www.google.com">aaaa</a>
+</body>
+</html>
