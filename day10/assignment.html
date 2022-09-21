@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var avengers = ['ironman','hulk','dr.strange','thor'];
+
+        function *eachhero(list){
+            for (let hero of list){
+                yield hero
+            }
+        };
+
+        let herolist = eachhero(avengers);
+
+        var si = setInterval(function(){
+            let seletedhero = herolist.next();
+            if(seletedhero.done){
+            
+                clearInterval(si);
+            }else{
+                console.log(seletedhero.value)
+            }
+        },1000)
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
