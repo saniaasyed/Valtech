@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            background-color: brown;
+            height: 300px;
+            width: 600px;
+            margin: 100px auto;
+            border: 1px solid black;
+        }
+
+        .nestedcontainer{
+            background-color: yellow;
+            height: 200px;
+            width: 500px;
+            margin: 50px auto;
+            border: 1px solid black;
+        }
+
+        .box{
+            background-color: blue;
+            height: 100px;
+            width: 400px;
+            margin: 50px auto;
+            border: 1px solid black;
+        }
+    </style>
+
+    <script>
+
+function mouseHandler(evt){
+        document.getElementsByClassName("log")[0].innerHTML += "<p> Type of Event:" +evt.class.getAttribute("class")+ "</p>"
+    // function clickHandler(evt){
+    //     document.getElementsByClassName("log")[0].innerHTML += "<p> Type of Event:" +evt.type+ "</p>"
+    // }
+}
+
+    function init(){
+        // document.getElementsByClassName("box")[0].addEventListener("mouseover",clickHandler);
+        // document.getElementsByClassName("box")[0].addEventListener("mouseup",clickHandler);
+        // document.getElementsByClassName("box")[0].addEventListener("mousedown",clickHandler);
+        // document.getElementsByClassName("box")[0].addEventListener("mouseleave",clickHandler);
+        // document.getElementsByClassName("box")[0].addEventListener("click",clickHandler);
+        document.getElementsByClassName("container")[0].addEventListener("click",mouseHandler,true);
+
+
+    }
+
+        document.addEventListener("DOMContentLoaded", init)
+    </script>
+</head>
+<body>
+   <div class="container"><div class="nestedcontainer"><div class="box"></div></div></div>
+   <div class="log"></div>
+   
+</body>
+</html>

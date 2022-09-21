@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: red;
+            overflow: auto;
+            height: 500px;
+            width: 700px;
+        }
+
+        .container div{
+            background-color: pink;
+            overflow: auto;
+            height: 100px;
+            width: 100px;
+            margin: 5px;
+            float: left;
+            font-size: 40px;
+            
+
+        }
+    </style>
+
+    <script>
+      var count = 1;
+    function clickHandler(){
+        var box = document.createElement("div");
+      
+        box.textContent=count;
+        document.getElementsByClassName("container")[0].appendChild(box);
+        count++;
+    }
+
+    function removeClickHandler(){
+        document.getElementsByTagName("button")[0].removeEventListener("click",clickHandler);
+    }
+
+     function init(){
+        document.getElementsByTagName("button")[0].addEventListener("click",clickHandler);
+     
+        document.getElementsByTagName("button")[1].addEventListener("click",removeClickHandler);
+     }
+
+        document.addEventListener("DOMContentLoaded",init);
+    </script>
+</head>
+<body>
+    <button>Click me</button>
+    <button>Click here to stop adding</button>
+    <div class="container"></div>
+</body>
+</html>
