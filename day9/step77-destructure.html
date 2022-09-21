@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var hero={
+            title: "Batman",
+            power: 7,
+            firstname: "Bruce",
+            lastname: "Wayne",
+            city: "Gotham"
+        };
+        
+
+        // var {title, power, firstname, lastname,city}=hero;
+        // title="joker";
+        // console.log(title);
+        // console.log(hero.title);
+
+       
+        //   var favheroes=['batman','superman','spiderman','antman'];
+        //   var [firsthero,secondhero,thirdhero,fourthero]=favheroes;
+
+        //   console.log(firsthero);
+        
+        // var allVals = {...hero}
+        // console.log(allVals.title);
+        // allVals.title="joker";
+        // console.log(allVals.title);
+        // console.log(hero.title);
+        
+        var allVals = JSON.parse(JSON.stringify(hero));
+        console.log(allVals.title);
+        allVals.title="joker";
+        console.log(allVals.title);
+        console.log(hero.title);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

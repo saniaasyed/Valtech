@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+     <script>
+
+var ironman={
+
+    firstname: "Tony",
+
+    lastname: "Stark",
+
+    fullname: function(){
+
+        return this.firstname+" "+this.lastname;
+
+    }
+
+};
+
+var hulk={
+
+    firstname: "Bruce",
+
+    lastname: "Banner",
+
+    };
+
+    var hulkdetails=ironman.fullname.bind(hulk);
+
+    console.log(ironman.fullname());
+
+    console.log(ironman.fullname.call(hulk));//has context and any number of parameters
+
+    console.log(ironman.fullname.apply(hulk));// has only 2,context and array which can hold parameters for the function
+
+    console.log(ironman.fullname.bind(hulk)());// will return it with the change in context
+
+    console.log(hulkdetails());// calling after bind
+
+</script>
+        
+</head>
+<body>
+    
+</body>
+</html>
