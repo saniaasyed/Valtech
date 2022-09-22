@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        class Person{
+            constructor(hname){
+                this.name = hname;
+            }
+
+            canwalk(){
+                return "i can walk"
+            }
+
+            cansayname(){
+                return "i can say name"
+            }
+        }
+        class Hero  extends Person{
+            //public property
+            title="default title";
+            firstname="default firstname";
+            lastname="default lastname";
+
+            //private property
+            #mission="my secret mission";
+            //static property that can be accesses by Hero but not by hero
+            static version =100
+            //constructor
+            constructor(htitle,hfname,hlname,hname){
+                super(hname);
+                this.title=htitle;
+                this.firstname=hfname;
+                this.lastname=hlname;
+            }
+         firstname(){
+            return this.firstname+ "" +this.lastname
+         }
+
+         get mission(){
+            return this.#mission;
+         }
+
+         set mission(nmission){
+            this.#mission=nmission;
+         }
+        };
+
+        var hero= new Hero("Ironman","Tony", "stark","avenger");
+        console.log(hero.title);
+        console.log(hero.version);
+        console.log(Hero.version);         
+        hero.mission = "save the world";
+        console.log(hero.mission);
+        console.log(hero.canwalk());
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

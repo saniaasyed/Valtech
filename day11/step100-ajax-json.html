@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .button{
+            width: 520px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .container{
+            background-color: pink;
+            width: 840px;
+        
+            display: table;
+            font-family: sans-serif;
+            margin: 10px auto;
+            padding: 10px;
+            text-align: justify;
+            
+        }
+
+        .container div{
+            background-color: rgb(192, 119, 192);
+            padding: 5px;
+            margin:5px;
+            width: 400px;
+            float: left;
+        }
+
+        .container div:hover{
+            background-color: whitesmoke;
+           
+        }  
+      </style>
+
+    <script>
+        
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener("readystatechange",xhrHandler)
+        function xhrHandler(evt){
+            if(evt.target.readyState===4){
+                JSON.parse(evt.target.responseText).root.participant.forEach(val => {
+                    console.log(val.firstname);
+                    document.getElementsByClassName("container")[0].innerHTML += document.getElementById("mytemp").innerHTML
+                .replace("{firstname}",val.firstname)
+                .replace("{lastname}",val.lastname)
+                .replace("{email}",val.email)
+                .replace("{city}",val.city);
+                })
+            }
+        }
+
+        function clickHandler(){
+         xhr.open("get","./modules/data.json",true);
+         xhr.send();
+        }
+        
+
+        function init(){
+            document.querySelector("button").addEventListener("click",clickHandler);
+        }
+
+        document.addEventListener("DOMContentLoaded",init);
+    </script>
+</head>
+<body><button>Click here</button>
+    <div class="container"></div>
+    <template id ="mytemp">
+        <div>
+        <h2>{firstname}{lastname}</h2>
+        <h3>email: {email}</h3>
+        <h3>From: {city}</h3>
+    </div>
+     </template>
+    
+</body>
+</html>
