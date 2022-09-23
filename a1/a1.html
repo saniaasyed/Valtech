@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-Save The World</title>
+    <style>
+        canvas{
+            border: 2px solid black;
+            margin:10px auto;
+            display:block;
+            background: linear-gradient(315deg, rgba(238,174,202,1) 0%, rgba(113,50,50,1) 89%, rgba(113,50,50,1) 100%);
+        }
+        
+    </style>
+    
+</head>
+<body>
+  
+    <canvas id="can" width="700" height="800"></canvas>
+    <button>Get Chart</button>
+    <script>
+         var xhr=new XMLHttpRequest();
+        xhr.addEventListener("readystatechange",xrhHandler);
+        function xrhHandler(evt){
+            if(evt.target.readyState===4){
+        var ctx=document.getElementById("can").getContext("2d");
+
+        ctx.beginPath();
+        ctx.strokeStyle="black";
+        ctx.moveTo(70,70);
+        ctx.lineTo(70,700);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.strokeStyle="black";
+        ctx.moveTo(70,700);
+        ctx.lineTo(600,700);
+        ctx.stroke();
+
+
+        ctx.beginPath(); 
+        ctx.font="bold 14px arial";
+        ctx.fillStyle = "black";
+        ctx.fillText("Agent Names",300,750);
+        ctx.closePath();
+
+        
+        ctx.fillText("100-",42,605);
+        ctx.fillText("200-",42,505);
+        ctx.fillText("300-",42,405);
+        ctx.fillText("400-",42,305);
+
+        ctx.font="bold 24px arial";
+        ctx.fillText("Save The World",280,100);
+
+        ctx.font="bold 14px arial";
+        ctx.fillStyle = "black";
+        ctx.fillText("Cases",20,200);
+        ctx.fillText("Handled",14,220);
+             
+        let value=JSON.parse(evt.target.responseText).data
+                for(var i=0;i<value.length;i++){
+                    
+
+                    ctx.beginPath();
+                    ctx.strokeStyle="black";
+                    ctx.fillStyle=value[0].col;
+                    ctx.moveTo(90,700);
+                    ctx.lineTo(90,700-value[0].casesHandled);
+                    ctx.lineTo(140,700-value[0].casesHandled);
+                    ctx.lineTo(140,700);
+                    ctx.moveTo(90,700);
+                    ctx.font="bold 12px arial";
+                    ctx.fillText(value[0].agentName,85,720);
+                    ctx.fillText(value[0].casesHandled,100,490);
+                    ctx.fill();
+                    ctx.stroke();
+                    ctx.closePath();
+
+                    ctx.beginPath();
+                    ctx.strokeStyle="black";
+                    ctx.fillStyle=value[1].col;
+                    ctx.moveTo(170,700);
+                    ctx.lineTo(170,700-value[1].casesHandled);
+                    ctx.lineTo(220,700-value[1].casesHandled);
+                    ctx.lineTo(220,700);
+                    ctx.moveTo(190,700);
+                    ctx.font="bold 12px arial";
+                    ctx.fillText(value[1].agentName,170,720);
+                    ctx.fillText(value[1].casesHandled,180,390);
+                    ctx.fill();
+                    ctx.stroke();
+                    ctx.closePath();
+
+                    ctx.beginPath();
+                    ctx.strokeStyle="black";
+                    ctx.fillStyle=value[2].col;
+                    ctx.moveTo(250,700);
+                    ctx.lineTo(250,700-value[2].casesHandled);
+                    ctx.lineTo(300,700-value[2].casesHandled);
+                    ctx.lineTo(300,700);
+                    ctx.moveTo(250,700);
+                    ctx.font="bold 12px arial";
+                    ctx.fillText(value[2].agentName,260,720);
+                    ctx.fillText(value[2].casesHandled,270,600);
+                    ctx.fill();
+                    ctx.stroke();
+                    ctx.closePath();
+
+                    ctx.beginPath();
+                    ctx.strokeStyle="black";
+                    ctx.fillStyle=value[3].col;
+                    ctx.moveTo(330,700);
+                    ctx.lineTo(330,700-value[3].casesHandled);
+                    ctx.lineTo(380,700-value[3].casesHandled);
+                    ctx.lineTo(380,700);
+                    ctx.moveTo(330,700);
+                    ctx.font="bold 12px arial";
+                    ctx.fillText(value[3].agentName,330,720);
+                    ctx.fillText(value[3].casesHandled,340,440);
+                    ctx.fill();
+                    ctx.stroke();
+                    ctx.closePath();
+
+                    ctx.beginPath();
+                    ctx.strokeStyle="black";
+                    ctx.fillStyle=value[4].col;
+                    ctx.moveTo(410,700);
+                    ctx.lineTo(410,700-value[4].casesHandled);
+                    ctx.lineTo(460,700-value[4].casesHandled);
+                    ctx.lineTo(460,700);
+                    ctx.moveTo(410,700);
+                    ctx.font="bold 12px arial";
+                    ctx.fillText(value[4].agentName,415,720);
+                    ctx.fillText(value[4].casesHandled,420,515);
+                    ctx.fill();
+                    ctx.stroke();
+                    ctx.closePath();
+
+                    ctx.beginPath();
+                    ctx.strokeStyle="black";
+                    ctx.fillStyle=value[5].col;
+                    ctx.moveTo(490,700);
+                    ctx.lineTo(490,700-value[5].casesHandled);
+                    ctx.lineTo(540,700-value[5].casesHandled);
+                    ctx.lineTo(540,700);
+                    ctx.moveTo(490,700);
+                    ctx.font="bold 12px arial";
+                    ctx.fillText(value[5].agentName,480,720);
+                    ctx.fillText(value[5].casesHandled,505,465);
+                    ctx.fill();
+                    ctx.stroke();
+                    ctx.closePath();
+
+                    
+                    
+                }         
+                
+                
+        }
+        }
+        function clickHandler(){
+            xhr.open("get","data.json",true);
+            xhr.send();
+        }
+        function init(){
+            document.querySelector("button").addEventListener("click",clickHandler);
+        }
+        document.addEventListener("DOMContentLoaded",init);   
+        
+        
+    </script>
+</body>
+
+</html>
