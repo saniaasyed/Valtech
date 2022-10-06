@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: red;
+            height: 70px;
+            width: 500px;
+            text-align: justify;
+            display: block;
+        }
+        div p{
+            background-color: aqua;
+            height: 70px;
+            width: 500px;
+            text-align: justify;
+            display: block;
+        }
+    </style>
+    <script src="jquery-3.6.1.js"></script>
+
+    <script>
+        
+        $(()=>{
+        // $("p.c").wrap("<div/>");
+        // $("p").wrap("<div/>");
+        // $("p").wrapAll("<div/>");
+        // $("p.b").wrapInner("<div/>");
+        // $("p.c").empty();
+        $("p.d").remove();
+        })
+    </script>
+</head>
+<body>
+    <p class="a">1 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, magni aliquid. Eum nobis eaque, ipsam, pariatur iusto reprehenderit nihil minima quia ipsum cum ducimus eveniet soluta labore? Nostrum, veniam sed.</p>
+    <p class="b" >2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, magni aliquid. Eum nobis eaque, ipsam, pariatur iusto reprehenderit nihil minima quia ipsum cum ducimus eveniet soluta labore? Nostrum, veniam sed.</p>
+    <p class="c">3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, magni aliquid. Eum nobis eaque, ipsam, pariatur iusto reprehenderit nihil minima quia ipsum cum ducimus eveniet soluta labore? Nostrum, veniam sed.</p>
+    <p class="d">4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, magni aliquid. Eum nobis eaque, ipsam, pariatur iusto reprehenderit nihil minima quia ipsum cum ducimus eveniet soluta labore? Nostrum, veniam sed.</p>
+
+
+</body>
+</html>

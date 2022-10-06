@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .container{
+        background-color: aqua;
+        height: 200px;
+        width: 500px;
+        overflow: auto;
+        margin: 5px;
+        display: block;
+
+      }
+    </style>
+    <script src="jquery-3.6.1.js"></script>
+    <script>
+         $(function(){
+            $("button").click(function(){
+        //     $getJSON("data.JSON"),function(res,status,jqxhr){
+
+        //     $(".container").text(JSON.stringify(res));
+
+        //     });
+        // // })
+
+        // promise = $.getJSON("data.json");
+        // promise.fail(function(err,s,qxhr){
+        //     console.log(err)
+        // })
+        // promise.done(function(res,status,jqxhr){
+        //     $(res.root.participant).each(function(idx,val){
+        //         $(".container").append("<p>"+val.firstname+"</p>");
+        //     })
+        // })
+
+        promise = $.ajax({
+            url : "data.json",
+            cache : false,
+            timeout: 4000
+        });
+
+        promise.done(function(res,status,jqxhr){
+            $(res.root.participant).each(function(idx,val){
+                $(".container").append("<p>"+val.firstname+"</p>");
+            })
+        })
+        
+
+
+            })})
+                   
+         
+    </script>
+
+</head>
+<body>
+    <button>Click here</button>
+    <div class="container"></div>
+</body>
+</html>

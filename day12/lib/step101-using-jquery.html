@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.1.js">
+       
+    </script>
+    <script>
+         $(()=>{
+
+// $(".box1").css("border","2px solid red")
+//basic filters
+// $("li:first").css("border","2px solid red");
+// $("li:last").css("border","2px solid red");
+// $("li:even").css("border","2px solid red");
+// $("li:odd").css("border","2px solid red");
+// $("li:eq(1)").css("border","2px solid red");
+// $("li:gt(3)").css("border","2px solid red");
+// $("li:lt(3)").css("border","2px solid red");
+// $(":header").css("border","2px solid red");
+// $(":not(li)").css("border","2px solid red");
+// $("h1:parent").css("border","2px solid red");
+//content filters
+// $("p:contains('Lorem')").css("border","2px solid red");
+// $("ol:has(li.box2)").css("border","2px solid red");
+//attribute filters
+// $("li[class=box3]").css("border","2px solid red");
+// $("li[class!=box3]").css("border","2px solid red");
+// $("li[class*=box3]").css("border","2px solid red");
+// $("li[class^=box3]").css("border","2px solid red");
+$("li[class$=box3]").css("border","2px solid red");
+
+
+
+
+
+    
+})
+</script>
+</head>
+<body>
+   
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+    </ul>
+ <h1>Heading 1</h1>
+<ol>
+    <li class="box1">abc</li>
+    <li class="box2">abc</li>
+    <li class="box3">abc</li>
+    <li class="box4">abc</li>
+    <li class="box5">abc</li>
+</ol>
+<h2>Heading 2</h2>
+<p id="player1">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis voluptate dolor doloribus commodi facere tempora sint similique amet non blanditiis quas perferendis, voluptates dolore reiciendis autem sit. Perferendis, excepturi non.
+
+</p>
+<h3>Heading 3</h3>
+<p id="player2">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta illum unde ratione, ad voluptatum vero, a consequatur atque laboriosam libero quisquam, recusandae rerum eveniet dolor at velit veniam eum. Quae.
+
+</p>
+
+
+</body>
+</html>
